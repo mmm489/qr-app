@@ -18,7 +18,7 @@ struct ContentView: View {
                     Label("Historial", systemImage: "clock.arrow.circlepath")
                 }
         }
-        .tint(.blue)
+        .tint(.purple)
     }
 }
 
