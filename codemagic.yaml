@@ -18,6 +18,9 @@ workflows:
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 17' \
             -configuration Debug \
+            -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO
+      - name: Find app
+        script: find build -name "*.app" -type d
     artifacts:
-      - build/Build/Products/**/*.app
+      - build/Build/Products/Debug-iphonesimulator/*.app
